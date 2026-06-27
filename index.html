@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shivai Agro Ingredients — Dehydrated Agri Products, Latur</title>
+  <meta name="description" content="Shivai Agro Ingredients manufactures premium dehydrated fruits, vegetables and spices in Mamdapur, Latur, Maharashtra. FSSAI certified. Export ready."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="go('home')" style="cursor:pointer">
+        <div class="nav-logo-name">Shivai Agro Ingredients</div>
+        <div class="nav-logo-sub">Mamdapur · Latur, Maharashtra</div>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link active" href="#" onclick="go('home');return false">Overview</a>
+        <a class="nav-link" href="#" onclick="go('about');return false">About Us</a>
+        <a class="nav-link" href="#" onclick="go('products');return false">Products</a>
+        <a class="nav-cta" href="#" onclick="go('enquire');return false">
+          Enquire <span class="nav-cta-badge" id="cart-badge">0</span>
+        </a>
+      </div>
+      <button class="nav-ham" id="ham-btn" onclick="toggleM()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nm">
+    <a class="nav-link" href="#" onclick="go('home');closeM();return false">Overview</a>
+    <a class="nav-link" href="#" onclick="go('about');closeM();return false">About Us</a>
+    <a class="nav-link" href="#" onclick="go('products');closeM();return false">Products</a>
+    <a class="nav-cta" href="#" onclick="go('enquire');closeM();return false">
+      Enquire <span class="nav-cta-badge" id="cart-badge-mobile">0</span> →
+    </a>
+  </div>
+</nav>
+
+<div id="page-home" class="page active">
+
+  <section class="hero-section">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-content" style="margin-right: 600px;">
+        <div class="hero-tag-pill reveal">Mamdapur · Deoni · Latur, Maharashtra</div>
+        <h1 class="hero h1 reveal delay-1">
+          Pure produce, <br>simply <em>preserved.</em>
+        </h1>
+        <p class="hero-sub reveal delay-2">Precision-dehydrated fruits, vegetables and spice ingredients — farm-sourced in Maharashtra and delivered export-ready to food manufacturers worldwide.</p>
+        <div class="hero-actions reveal delay-3">
+          <a href="#" class="btn-hero" onclick="go('products');return false">Explore catalogue →</a>
+          <a href="#" class="btn-hero-ghost" onclick="go('enquire');return false">Request a sample</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      <span class="t-item">Green Chilli Flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Tomato Flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Tomato Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Banana  Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Beetroot Flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Beetroot Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Onion flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Ginger Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Dried Kasoori Methi</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Mango Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">FSSAI Certified</span><span class="t-item t-sep">·</span>
+      <span class="t-item">APEDA Registered</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Export Ready</span><span class="t-item t-sep">·</span>
+      <span class="t-item">≤ 4% Moisture</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Green Chilli Flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Tomato Flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Tomato Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Banana  Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Beetroot Flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Beetroot Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Onion flakes</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Ginger Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Dried Kasoori Methi</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Mango Powder</span><span class="t-item t-sep">·</span>
+      <span class="t-item">FSSAI Certified</span><span class="t-item t-sep">·</span>
+      <span class="t-item">APEDA Registered</span><span class="t-item t-sep">·</span>
+      <span class="t-item">Export Ready</span><span class="t-item t-sep">·</span>
+      <span class="t-item">≤ 4% Moisture</span><span class="t-item t-sep">·</span>
+    </div>
+  </div>
+
+  <div class="stat-bar">
+    <div class="wrap">
+      <div class="stat-bar-inner">
+        <div class="stat-cell reveal">
+          <div class="stat-n">10<sup>+</sup></div>
+          <div class="stat-l">Product lines</div>
+          <div class="stat-desc">Onion to ginger, Beetroot & carrot to tomato.</div>
+        </div>
+        <div class="stat-cell reveal delay-1">
+          <div class="stat-n">≤4%</div>
+          <div class="stat-l">Residual moisture</div>
+          <div class="stat-desc">Industry-leading dryness for shelf life, safety and flavour lock.</div>
+        </div>
+        <div class="stat-cell reveal delay-2">
+          <div class="stat-n">24 hr</div>
+          <div class="stat-l">Sample dispatch</div>
+          <div class="stat-desc">Request before noon, and samples leave the same business day.</div>
+        </div>
+        <div class="stat-cell reveal delay-3">
+          <div class="stat-n">Our promise</div>
+          <div class="stat-l">Quality you can trust</div>
+          <div class="stat-desc">Every batch is prepared carefully, with freshness and honesty at the core.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="sec">
+      <div class="split-grid">
+        <div class="split-txt reveal-left">
+          <p class="eyebrow reveal">Who we are</p>
+          <h2 class="section-title">A processing unit<br>built <em>close to the farm.</em></h2>
+          <p class="section-body">Shivai Agro Ingredients is a dehydrated agri-product manufacturer based in Mamdapur — a small but productive village in Deoni taluka, Latur district of Maharashtra. We set up here deliberately, because proximity to the source is everything.</p>
+          <p class="section-body">We process fruits, vegetables and spices through precision dehydration, milling and grading. Our customers are food manufacturers, spice blenders, institutional buyers and export houses across India, the Middle East and beyond.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+            <a href="#" class="btn-dark" onclick="go('about');return false">Our story →</a>
+            <a href="#" class="btn-outline" onclick="go('products');return false">See products</a>
+          </div>
+        </div>
+        <div class="split-vis reveal-right">
+          <div class="vis-stack">
+            <div class="vis-tall">
+              <img class="img-cover" src="https://images.pexels.com/photos/20317052/pexels-photo-20317052.jpeg?_gl=1*zktwqi*_ga*NDU1OTU2Mjg4LjE3ODIyOTgxOTU.*_ga_8JE65Q40S6*czE3ODIzNzk3OTUkbzIkZzEkdDE3ODIzNzk5OTckajQ2JGwwJGgw" alt="Beetroot farm produce maharashtra"/>
+              <span class="img-label">Latur farmland, Maharashtra</span>
+            </div>
+            <div class="vis-grid-2">
+              <div class="vis-cell">
+                <img class="img-cover" src="https://images.pexels.com/photos/37434451/pexels-photo-37434451.jpeg?_gl=1*1qbbnno*_ga*NDU1OTU2Mjg4LjE3ODIyOTgxOTU.*_ga_8JE65Q40S6*czE3ODIzNzk3OTUkbzIkZzEkdDE3ODIzODAyNTYkajUxJGwwJGgw" alt="Maharashtra onions"/>
+                <span class="img-label">Farm-direct sourcing</span>
+              </div>
+              <div class="vis-cell">
+                <img class="img-cover" src="https://images.pexels.com/photos/20344371/pexels-photo-20344371.jpeg?_gl=1*16dz1x4*_ga*NDU1OTU2Mjg4LjE3ODIyOTgxOTU.*_ga_8JE65Q40S6*czE3ODIzNzk3OTUkbzIkZzEkdDE3ODIzODAxMzUkajU5JGwwJGgw" alt="Maharashtra Methi, kasoori methi raw material"/>
+                <span class="img-label">Raw methi, harvest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div style="max-width:620px" class="reveal">
+        <p class="eyebrow reveal">How it works</p>
+        <h2 class="section-title">From harvest to<br><em>Dried & Packaged products.</em></h2>
+        <p class="section-body">Every product passes through the same four-stage discipline. No shortcuts. No outsourcing. Everything under one roof.</p>
+      </div>
+      <div class="process-grid reveal delay-2">
+        <div class="process-step">
+          <div class="process-n">01</div>
+          <div class="process-dot"></div>
+          <div class="process-name">Farm Procurement</div>
+          <div class="process-desc">Directly from Latur, Osmanabad and Solapur farms. We assess crops at source to ensure quality.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-n">02</div>
+          <div class="process-dot"></div>
+          <div class="process-name">Cleaning &amp; Grading</div>
+          <div class="process-desc">Raw produce is washed, sorted and graded by size, colour and density. Damaged or substandard material is seperated throughly.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-n">03</div>
+          <div class="process-dot"></div>
+          <div class="process-name">Precision Dehydration</div>
+          <div class="process-desc">Tray driers calibrated per SKU. Time and temperature curves are validated to achieve ≤4% residual moisture while preserving colour, aroma and bioactives.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-n">04</div>
+          <div class="process-dot"></div>
+          <div class="process-name">Packaging &amp; Storage</div>
+          <div class="process-desc">HDPE-lined bags, BOPP pouches or food-grade cartons. Full COA documentation ready at dispatch.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="reveal">
+        <p class="eyebrow reveal">What drives us</p>
+        <h2 class="section-title">Principles we don't<br><em>compromise on.</em></h2>
+      </div>
+      <div class="principles-grid">
+        <div class="principle-card reveal delay-1">
+          <div class="principle-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="principle-name">Farm-direct sourcing</div>
+          <div class="principle-desc">We work directly with farmers in Latur, Osmanabad and Solapur — no middlemen, fair prices, and completely verified batch.</div>
+        </div>
+        <div class="principle-card reveal delay-2">
+          <div class="principle-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke-linecap="round"/><path d="M12 16v-4M12 8h.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="principle-name">Process integrity</div>
+          <div class="principle-desc">Every drying curve is calibrated per SKU. We target ≤4% residual moisture with zero additives, preservatives or artificial colours. Clean label is not a trend for us — it is policy.</div>
+        </div>
+        <div class="principle-card reveal delay-3">
+          <div class="principle-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="principle-name">Assurance</div>
+          <div class="principle-desc">Every batch is prepared honestly, with freshness and consistency you can rely on.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="reveal">
+        <p class="eyebrow reveal">From the field</p>
+        <h2 class="section-title">Life on our farms<br>&amp; <em>facility.</em></h2>
+      </div>
+      <div class="gallery-mosaic">
+        <div class="gallery-cell reveal-scale delay-1">
+          <img class="img-cover" src="https://images.pexels.com/photos/33872280/pexels-photo-33872280.jpeg?_gl=1*qf4g91*_ga*NDU1OTU2Mjg4LjE3ODIyOTgxOTU.*_ga_8JE65Q40S6*czE3ODIzNzk3OTUkbzIkZzEkdDE3ODIzODEyOTQkajM5JGwwJGgw" alt="Tomato Fields"/>
+          <span class="img-label">Tomato fields, Marathwada</span>
+        </div>
+        <div class="gallery-cell reveal-scale delay-2">
+          <img class="img-cover" src="https://images.pexels.com/photos/20234970/pexels-photo-20234970.jpeg?_gl=1*1l517c3*_ga*NDU1OTU2Mjg4LjE3ODIyOTgxOTU.*_ga_8JE65Q40S6*czE3ODIzNzk3OTUkbzIkZzEkdDE3ODIzODE0MjEkajQ0JGwwJGgw" alt="Ginger"/>
+          <span class="img-label">Ginger harvest, Sambhaji Nagar.</span>
+        </div>
+        <div class="gallery-cell reveal-scale delay-3">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=500&q=80" alt="Spinach"/>
+          <span class="img-label">Leafy greens processing</span>
+        </div>
+        <div class="gallery-cell reveal-scale delay-4">
+          <img class="img-cover" src="https://images.pexels.com/photos/37386773/pexels-photo-37386773.jpeg?_gl=1*uogcmv*_ga*NDU1OTU2Mjg4LjE3ODIyOTgxOTU.*_ga_8JE65Q40S6*czE3ODIzNzk3OTUkbzIkZzEkdDE3ODIzODEyMjYkajEzJGwwJGgw" alt="Chilli sorting"/>
+          <span class="img-label">Chilli sorting line</span>
+        </div>
+        <div class="gallery-cell reveal-scale delay-5">
+          <img class="img-cover" src="https://5.imimg.com/data5/ANDROID/Default/2025/12/567367980/YL/AH/DY/43909579/product-jpeg-1000x1000.jpg" alt="Processing unit"/>
+          <span class="img-label">Dehydration facility</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="reveal">
+        <p class="eyebrow reveal">Compliance &amp; Certification</p>
+        <h2 class="section-title">Every document. <em>Every time.</em></h2>
+        <p class="section-body" style="margin-top:16px">Buyers need certainty — regulatory, safety and quality assurance documentation is as important as the ingredient itself. We keep all of it current.</p>
+      </div>
+      <div class="cert-row">
+        <div class="cert-card reveal delay-1">
+          <div class="cert-badge">✓ Licensed</div>
+          <div class="cert-name">FSSAI Standard</div>
+          <div class="cert-sub">Food Safety & Standards Authority of India</div>
+        </div>
+        <div class="cert-card reveal delay-2">
+          <div class="cert-badge">✓ Registered</div>
+          <div class="cert-name">GST India</div>
+          <div class="cert-sub">27DOYPK4204M1ZA</div>
+        </div>
+        <!-- <div class="cert-card reveal delay-3">
+          <div class="cert-badge">✓ Active</div>
+          <div class="cert-name">APEDA Export</div>
+          <div class="cert-sub">Agricultural & Processed Food Products</div>
+        </div> 
+        <div class="cert-card reveal delay-4">
+          <div class="cert-badge">✓ Compliant</div>
+          <div class="cert-name">Phytosanitary</div>
+          <div class="cert-sub">NPPO India — Available on request</div>
+        </div>
+        -->
+      </div>
+    </section>
+  </div>
+
+  <div class="cta-strip">
+    <div class="wrap">
+      <div class="cta-strip-inner">
+        <div class="reveal">
+          <h2>Ready to source from<br><em>Shivai Agro, with best quality?</em></h2>
+          <p>Samples dispatched within 24 hours. COA provided with every enquiry.</p>
+        </div>
+        <div class="cta-strip-actions reveal delay-2">
+          <a href="#" class="btn-hero" onclick="go('enquire');return false">Send an enquiry →</a>
+          <a href="#" class="btn-hero-ghost" onclick="go('products');return false">View catalogue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><div id="page-about" class="page">
+
+  <div class="about-hero">
+    <div class="wrap">
+      <div class="about-hero-inner">
+        <p class="eyebrow reveal" style="color:var(--gold-light)">About Us</p>
+        <h1 class="reveal delay-1">Grown in Marathwada,<br><em>Preserved for good.</em></h1>
+        <p class="about-hero-sub reveal delay-2">Shivai Agro Ingredients was born from a simple conviction — the farms of Marathwada produce some of India's finest raw agri produce, and with the right processing, that produce a product for a deserving market.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section class="sec">
+      <div class="split-grid">
+        <div class="split-vis reveal-left">
+          <div class="vis-tall">
+            <img class="img-cover" src="https://thumbs.dreamstime.com/b/beautiful-indian-farm-landscape-11981336.jpg" alt="Sustainable farming"/>
+            <span class="img-label">Mamdapur, Latur district</span>
+          </div>
+          <div class="vis-short" style="margin-top:12px">
+            <img class="img-cover" src="https://5.imimg.com/data5/SELLER/Default/2023/5/306593050/KZ/ZF/RC/110109728/mango-pulp-making-machine-500x500.jpg" alt="Quality selection"/>
+            <span class="img-label">Quality inspection, in-house</span>
+          </div>
+        </div>
+        <div class="split-txt reveal-right">
+          <p class="eyebrow reveal">Our Story</p>
+          <h2 class="section-title">Built from the<br>ground, <em>literally.</em></h2>
+          <p class="section-body">Our journey began in the fields of Maharashtra. After seeing how quality and farmer margins often get lost in the long chain between harvest and buyer, we chose a different path — to build close to the source.</p>
+          <p class="section-body">Shivai Agro was set up in Mamdapur, Deoni taluka — right where the crops grow. Being near the farms means being near the farmers and the raw material. From procurement to dehydration, milling, and grading, everything happens under one roof, with one team, and one focus: keeping quality intact.</p>
+          <div class="details-table">
+            <div class="detail-row">
+              <span class="d-label">Registered Name</span>
+              <span class="d-val">Shivai Agro Ingredients</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">Factory Location</span>
+              <span class="d-val">Mamdapur, Tal. Deoni, Dist. Latur</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">State</span>
+              <span class="d-val">Maharashtra — 413 519</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">FSSAI License</span>
+              <span class="d-val" style="font-family:monospace">21526049001763</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">GST Number</span>
+              <span class="d-val" style="font-family:monospace">27DOYPK4204M1ZA</span>
+            </div>
+            <!-- <div class="detail-row">
+              <span class="d-label">APEDA Registration</span>
+              <span class="d-val">Active · Export Authorised</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="eyebrow reveal">Founder</p>
+      <h2 class="section-title reveal delay-1">The person<br>behind the <em>produce.</em></h2>
+      <div class="founder-card reveal delay-2" style="margin-top:48px">
+        <div class="founder-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Founder"/>
+        </div>
+        <div class="founder-body">
+          <p class="eyebrow reveal">Founder &amp; Director</p>
+          <blockquote class="founder-quote">"I grew up watching the best produce in Marathwada get undervalued at the mandi. The goal was simple — give it the processing it deserves, and take it to the world directly."</blockquote>
+          <div>
+            <div class="founder-name">Shivaji Biradar</div>
+            <div class="founder-title">Founder &amp; Managing Director, Shivai Agro Ingredients</div>
+          </div>
+          <p class="section-body" style="max-width:100%;font-size:14.5px">A decade of experience in food processing and agri-supply chains across Maharashtra. Built Shivai Agro from a single drying unit to a full-stack dehydration facility serving export markets.</p>
+          <a href="#" class="btn-dark" style="width:fit-content" onclick="go('enquire');return false">Get in touch →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="split-grid rev">
+        <div class="split-txt reveal-right">
+          <p class="eyebrow reveal">The Manufacturing Unit</p>
+          <h2 class="section-title">One roof.<br><em>Every step.</em></h2>
+          <p class="section-body">Our Mamdapur facility handles the complete chain — cleaning, grading, dehydration, milling, quality testing and packaging — without outsourcing any critical step. This is how we maintain end-to-end quality control.</p>
+          <p class="section-body">The facility is designed for food-safety at every node: food-grade surfaces, packing rooms, and calibrated instrumentation throughout.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
+              <div style="font-family:var(--ff-d);font-size:32px;font-weight:300;color:var(--accent)">900<sup style="font-size:0.5em">sq ft</sup></div>
+              <div style="font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:0.06em;margin-top:4px">Processing floor</div>
+            </div>
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px">
+              <div style="font-family:var(--ff-d);font-size:32px;font-weight:300;color:var(--accent)">Multi-SKU</div>
+              <div style="font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:0.06em;margin-top:4px">Drying Facility</div>
+            </div>
+          </div>
+        </div>
+        <div class="split-vis reveal-left">
+          <div class="vis-tall">
+            <img class="img-cover" src="https://5.imimg.com/data5/ANDROID/Default/2021/12/SF/MK/LJ/12519754/prod-20211212-040330846457292768176378-jpg-500x500.jpg" alt="Manufacturing facility"/>
+            <span class="img-label">Processing facility, Mamdapur</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="reveal">
+        <p class="eyebrow reveal">Our Values</p>
+        <h2 class="section-title">How we think<br>about <em>quality.</em></h2>
+      </div>
+      <div class="principles-grid">
+        <div class="principle-card reveal delay-1">
+          <div class="principle-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 110-8 4 4 0 010 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="principle-name">Farmer Partnership</div>
+          <div class="principle-desc">We pay fair prices, provide advance agreements and support sustainable farming practices. A thriving farmer is the foundation of a good ingredient.</div>
+        </div>
+        <div class="principle-card reveal delay-2">
+          <div class="principle-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5M12 2C6.477 2 2 6.477 2 12M22 12c0-5.523-4.477-10-10-10M12 12a3 3 0 100-6 3 3 0 000 6z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="principle-name">Technical Rigour</div>
+          <div class="principle-desc">Our process parameters are validated, documented and reproducible. We don't rely on instinct — every batch runs to a defined specification sheet.</div>
+        </div>
+        <div class="principle-card reveal delay-3">
+          <div class="principle-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="principle-name">Value for Emerging Buyers </div>
+          <div class="principle-desc">Affordable solutions for global buyers. Cost-effective without compromising safety or standards.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="cta-strip">
+    <div class="wrap">
+      <div class="cta-strip-inner">
+        <div class="reveal">
+          <h2>Interested in sourcing<br>from <em>Shivai Agro?</em></h2>
+          <p>We'd love to discuss your requirements. Samples available within 24 hours.</p>
+        </div>
+        <div class="cta-strip-actions reveal delay-2">
+          <a href="#" class="btn-hero" onclick="go('enquire');return false">Start a conversation →</a>
+          <a href="#" class="btn-hero-ghost" onclick="go('products');return false">Our products</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><div id="page-products" class="page">
+
+  <div class="products-hero">
+    <div class="wrap">
+      <div class="prod-hero-row">
+        <div class="reveal" style="flex-grow: 1;">
+          <p class="eyebrow reveal">Our Catalogue</p>
+          <h1 class="prod-hero-h">Premium dehydrated<br><em>products.</em></h1>
+          <p class="prod-hero-sub">Every product is farm-sourced, precision-dehydrated and seal packed. Click any item to see full specifications or build sample requests.</p>
+        </div>
+        <div class="reveal delay-2" style="text-align:right;flex-shrink:0">
+          <div style="font-family:var(--ff-d);font-size:56px;font-weight:300;color:var(--accent);line-height:1" id="prod-count-hero">7</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-3);margin-top:4px">Products available</div>
+        </div>
+      </div>
+
+      <div class="catalog-controls reveal delay-3">
+        <div class="search-input-wrap">
+          <div class="search-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <input type="text" class="search-input" id="catalog-search" placeholder="Search ingredients (e.g. Ginger)..." oninput="handleSearch(this.value)" />
+        </div>
+        <div class="cat-bar" id="cat-bar">
+          <button class="cat-pill active" data-cat="all">All Products</button>
+          <button class="cat-pill" data-cat="vegetable">Vegetables</button>
+          <button class="cat-pill" data-cat="spice">Spices</button>
+          <button class="cat-pill" data-cat="fruit">Fruits</button>
+          <button class="cat-pill" data-cat="leaf">Leaves &amp; Greens</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="prod-grid" id="prod-grid"></div>
+  </div>
+
+  <div class="cta-strip">
+    <div class="wrap">
+      <div class="cta-strip-inner">
+        <div class="reveal">
+          <h2>Don't see your<br><em>product?</em></h2>
+          <p>We develop custom blends and new SKUs for regular buyers. Tell us what you need.</p>
+        </div>
+        <div class="cta-strip-actions reveal delay-2">
+          <a href="#" class="btn-hero" onclick="go('enquire');return false">Custom enquiry →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><div id="page-enquire" class="page">
+
+  <div class="enquire-hero">
+    <div class="wrap">
+      <div class="enquire-hero-inner">
+        <p class="eyebrow reveal" style="color:var(--gold-light)">Enquire</p>
+        <h1 class="reveal delay-1">Let's talk<br><em>ingredients.</em></h1>
+        <p class="reveal delay-2">Need bulk supply, product samples, COA documents, or want to discuss a custom formulation? Send us a message — we respond within 24 business hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="enquire-body">
+    <div class="enquire-info">
+      <h2 class="enquire-info-head reveal">We're easy to reach.</h2>
+      <p class="enquire-info-sub reveal delay-1">A dedicated team handles all wholesale and export enquiries. Whether you're placing a first sample order or planning long-term supply, we'll respond with the full picture.</p>
+
+      <div class="basket-summary-card reveal delay-2">
+        <div class="basket-summary-header">
+          <span class="basket-title">Sample Basket</span>
+          <span class="basket-count-badge" id="basket-count">0 items</span>
+        </div>
+        <div class="basket-items-list" id="basket-items-container">
+          <div class="basket-empty-state">No products selected. Browse our catalog to request custom cut/form samples.</div>
+        </div>
+      </div>
+
+      <div class="info-item reveal delay-3">
+        <div class="info-key">Factory Address</div>
+        <div class="info-val">Mamdapur, Tal. Deoni<br>Dist. Latur, Maharashtra — 413 519</div>
+      </div>
+      <div class="info-item reveal delay-3">
+        <div class="info-key">Email</div>
+        <div class="info-val"><a href="mailto:contact@shivaiagro.com">contact@shivaiagro.com</a></div>
+      </div>
+      <div class="info-item reveal delay-4">
+        <div class="info-key">Phone</div>
+        <div class="info-val"><a href="tel:+919834162384">+91 98341 62384</a></div>
+      </div>
+      <div class="info-item reveal delay-4">
+        <div class="info-key">Business Hours</div>
+        <div class="info-val">Monday – Saturday<br>9:00 AM – 6:00 PM IST</div>
+      </div>
+
+      <div class="why-list reveal delay-5">
+        <div class="why-item">
+          <div class="why-check">
+            <svg viewBox="0 0 10 8" width="10" height="10"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <div class="why-text">Sample dispatch within 24 hours of enquiry confirmation</div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">
+            <svg viewBox="0 0 10 8" width="10" height="10"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <div class="why-text">COA, MSDS and phytosanitary documents provided with every batch</div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">
+            <svg viewBox="0 0 10 8" width="10" height="10"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <div class="why-text">Custom pack sizes and private labelling available for regular buyers</div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">
+            <svg viewBox="0 0 10 8" width="10" height="10"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <div class="why-text">APEDA-registered for export — all documentation in order</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="enquire-form-wrap">
+      <div id="form-wrap" class="form-box reveal">
+        <div style="margin-bottom:28px">
+          <div style="font-family:var(--ff-d);font-size:26px;font-weight:400;color:var(--accent);margin-bottom:6px">Send an enquiry</div>
+          <div style="font-size:13px;color:var(--ink-3);font-weight:300">All fields marked * are required.</div>
+        </div>
+        <div class="f-row">
+          <div class="field">
+            <label>Name *</label>
+            <input type="text" id="fn" placeholder="Your full name"/>
+          </div>
+          <div class="field">
+            <label>Company</label>
+            <input type="text" id="fc" placeholder="Company or brand"/>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="field">
+            <label>Email *</label>
+            <input type="email" id="fe" placeholder="you@company.com"/>
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" id="fp" placeholder="+91 XXXXX XXXXX"/>
+          </div>
+        </div>
+        <div class="field">
+          <label>Country / Region</label>
+          <select id="fr">
+            <option value="" disabled selected>Select region</option>
+            <option>India</option>
+            <option>United Arab Emirates</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Saudi Arabia</option>
+            <option>Germany</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Product of interest</label>
+          <select id="fs">
+            <option value="" disabled selected>Select a product</option>
+            <option>Dehydrated Ginger</option>
+            <option>Dehydrated Green Chilli</option>
+            <option>Dehydrated Tomato</option>
+            <option>Dehydrated Carrot</option>
+            <option>Dehydrated Onion</option>
+            <option>Dehydrated Garlic</option>
+            <option>Dehydrated Spinach</option>
+            <option>Custom Blend / Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Requirements &amp; Notes</label>
+          <textarea id="fm" placeholder="Describe your quantity, pack format, moisture spec, or any custom requirements..."></textarea>
+        </div>
+        <button class="f-submit" onclick="submitEnquiry()">Send enquiry →</button>
+      </div>
+      <div class="f-success" id="f-success">
+        <div class="s-icon">✓</div>
+        <h3>Enquiry received.</h3>
+        <p>We'll connect with you within 24 business hours. If urgent, reach us directly at contact@shivaiagro.com</p>
+      </div>
+    </div>
+  </div>
+</div><div class="modal-ov" id="modal-ov" onclick="closeMod(event)">
+  <div class="modal" id="modal-box">
+    <button class="modal-close" onclick="closeModDirect()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">Shivai Agro Ingredients</div>
+        <div class="foot-brand-sub">Mamdapur · Latur, Maharashtra</div>
+        <div class="foot-addr">
+          Mamdapur, Tal. Deoni<br>
+          Dist. Latur, MH — 413 519<br>
+          India
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-head">Navigate</div>
+        <div class="foot-links">
+          <a href="#" onclick="go('home');return false">Overview</a>
+          <a href="#" onclick="go('about');return false">About Us</a>
+          <a href="#" onclick="go('products');return false">Products</a>
+          <a href="#" onclick="go('enquire');return false">Enquire</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-head">Products</div>
+        <div class="foot-links">
+          <a href="#" onclick="go('products');return false">Dehydrated Vegetables</a>
+          <a href="#" onclick="go('products');return false">Spice Powders</a>
+          <a href="#" onclick="go('products');return false">Leafy Greens</a>
+          <a href="#" onclick="go('products');return false">Custom Blends</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-head">Contact</div>
+        <div class="foot-links">
+          <a href="mailto:contact@shivaiagro.com">contact@shivaiagro.com</a>
+          <a href="tel:+919834162384">+91 98341 62384</a>
+          <a href="#" onclick="go('enquire');return false">Send an enquiry</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-copy">© 2026 Shivai Agro Ingredients. All rights reserved.</div>
+      <div class="foot-certbadges">
+        <span class="foot-badge">FSSAI</span>
+        <span class="foot-badge">APEDA</span>
+        <span class="foot-badge">GST</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
