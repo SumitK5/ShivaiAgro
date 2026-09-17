@@ -1,37 +1,37 @@
 /* ── PRODUCT DATA ─────────────────────────────── */
 const PRODUCTS = [
   {id:1,name:'Dehydrated Ginger',cat:['spice'],catLabel:['Spice'],
-   img:'assets/images/ginger-flakes.jpg',
+   img:'assets/images/ginger-flakes.webp',
    desc:'Premium sun-cabinet dried ginger sourced directly from Marathwada. Highly dynamic pungency profiles with natural volatile oil retention.',
    specs:{Moisture:'≤ 4%',Forms:'Slices · Granules · Powder',Colour:'Pale Buff','Shelf life':'18 months'},
    tags:['Export grade','Farm-traced','No sulfites']},
   {id:2,name:'Dehydrated Green Chilli',cat:['spice'],catLabel:['Spice'],
-   img:'assets/images/Dehydrated-Green-Chilli-Flakes.jpg',
+   img:'assets/images/Dehydrated-Green-Chilli-Flakes.webp',
    desc:'Fresh local green chillies rapidly processed to protect high capsicum and natural heat. Perfect for global blending lines and instant seasonings.',
    specs:{Moisture:'≤ 4%',Forms:'Flakes · Powder',Colour:'Olive Green','Shelf life':'18 months'},
    tags:['High capsicum','No colouring','Clean label']},
   {id:3,name:'Dehydrated Tomato',cat:['vegetable', 'Fruit'],catLabel:['Vegetable'],
-   img:'assets/images/Savory-Dehydrated-Tomato-flakes.jpg',
+   img:'assets/images/Savory-Dehydrated-Tomato-flakes.webp',
    desc:'Lycopene-rich processing using fresh vine tomatoes from Latur. Retains optimal tang, colour and organic aroma through precise low-temperature drying.',
    specs:{Moisture:'≤ 4%',Forms:'Diced · Flakes · Powder',Colour:'Deep Red','Shelf life':'24 months'},
    tags:['Lycopene-rich','No additives','Bulk available']},
   {id:4,name:'Dehydrated Carrot',cat:['vegetable'],catLabel:['Vegetable'],
-   img:'assets/images/Dehydrated-carrot-square.jpg',
+   img:'assets/images/Dehydrated-carrot-square.webp',
    desc:'Sweet orange Nantes-variety carrots, cleaned and custom-diced. Excellent rehydration ratio ideal for instant soups, ready meals and baby food.',
    specs:{Moisture:'≤ 5%',Forms:'Diced · Strips · Powder',Colour:'Bright Orange','Shelf life':'18 months'},
    tags:['Beta-carotene','Clean label','Rehydration 1:4']},
   {id:5,name:'Dehydrated Onion',cat:['vegetable','spice'],catLabel:['Vegetable'],
-   img:'assets/images/dehydrated-red-onion-flakes-364-HD.jpg',
+   img:'assets/images/dehydrated-red-onion-flakes-364-HD.webp',
    desc:'Nasik-region onions harvested at peak maturity. High natural sweetness and signature pungency maintained through rapid cabinet dehydration.',
    specs:{Moisture:'≤ 4%',Forms:'Granules · Rings · Powder',Colour:'Creamy White','Shelf life':'24 months'},
    tags:['No additives','Chef quality','High pungency']},
   {id:6,name:'Dehydrated Beetroot',cat:['vegetable'],catLabel:['Vegetable'],
-   img:'assets/images/bete-vulgaris-freshly-harvested-and-sliced-beets-flakes.jpg',
+   img:'assets/images/bete-vulgaris-freshly-harvested-and-sliced-beets-flakes.webp',
    desc:'Pure Beetroot Flake dehydration retaining vital Betalain complexes without artificial bleaching. Natural pink-red colour is your assurance of purity.',
    specs:{Moisture:'≤ 4%',Forms:'Flakes · Granules · Powder',Colour:'Natural Pink-Red','Shelf life':'24 months'},
    tags:['Betalain locked','Zero bleach','Export grade']},
   {id:7,name:'Dehydrated Spinach',cat:['leaf'],catLabel:['Leaves & Greens'],
-   img:'assets/images/dehydrated_spinach.jpg',
+   img:'assets/images/dehydrated_spinach.webp',
    desc:'Mineral-dense baby spinach processed below 55°C to sustain chlorophyll, iron and leaf structure. Rehydrates to near-fresh appearance.',
    specs:{Moisture:'≤ 5%',Forms:'Whole · Crushed · Powder',Colour:'Emerald Green','Shelf life':'18 months'},
    tags:['Nutrient-dense','Low-temp dried','Natural colour']},
@@ -510,15 +510,22 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
-
 const heroBg = document.getElementById('hero-bg');
+let scrollTicking = false;
+
 window.addEventListener('scroll', () => {
-  const page = document.getElementById('page-home');
-  if (page && page.classList.contains('active') && heroBg) {
-    heroBg.style.transform = `translateY(${window.scrollY * 0.32}px) scale(1.04)`;
+  if (!scrollTicking) {
+    window.requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      if (nav) nav.classList.toggle('scrolled', scrollY > 20);
+
+      const page = document.getElementById('page-home');
+      if (page && page.classList.contains('active') && heroBg) {
+        heroBg.style.transform = `translateY(${scrollY * 0.32}px) scale(1.04)`;
+      }
+      scrollTicking = false;
+    });
+    scrollTicking = true;
   }
 }, { passive: true });
 // Clear form on load to prevent bfcache retention
