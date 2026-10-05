@@ -1206,13 +1206,3 @@ footer{
   height: calc(100vh - 76px) !important;
   height: calc(100dvh - 76px) !important;
 }
-
-/* Fix mobile menu text colors on the enquire page */
-body[data-page="enquire"] .nav-mobile .nav-link {
-  color: var(--ink) !important;
-}
-body[data-page="enquire"] .nav-mobile .nav-link:hover,
-body[data-page="enquire"] .nav-mobile .nav-link.active {
-  color: var(--accent) !important;
-  background: transparent !important;
-}
