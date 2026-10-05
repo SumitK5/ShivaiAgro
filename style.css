@@ -1206,3 +1206,12 @@ footer{
   height: calc(100vh - 76px) !important;
   height: calc(100dvh - 76px) !important;
 }
+
+/* Fix mobile menu on enquire page using dark theme */
+body[data-page="enquire"] .nav-mobile {
+  background: #294636 !important;
+}
+body[data-page="enquire"] .nav-mobile .nav-link {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.16) !important;
+}
